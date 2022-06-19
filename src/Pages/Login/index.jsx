@@ -1,11 +1,11 @@
-import bdIMG from './assets/logobradev.png'
-import './style.css'
+import { Link } from 'react-router-dom';
+import bdIMG from '../../assets/logobradev.png'
+import { LayoutComponents } from '../../components/LayoutComponents';
 
-function App() {
-  return (
-    <div className="container">
-      <div className="container-login">
-        <div className="wrap-login">
+
+export const Login = () =>{
+    return (
+        <LayoutComponents>
           <form className="login-form">
             <span className="login-form-title">Bem-vindo(a)</span>
             <span className="login-form-title">
@@ -28,14 +28,9 @@ function App() {
             <div className='text-center'>
               <span className='txt1'>Não possui conta?</span>
 
-              <a className='txt2' href='#'>Criar conta</a>
+              <Link className='txt2' to='#'>Criar conta</Link>
             </div>
-
           </form>
-        </div>
-      </div>
-    </div>
-  );
+        </LayoutComponents>  
+    )
 }
-
-export default App;
